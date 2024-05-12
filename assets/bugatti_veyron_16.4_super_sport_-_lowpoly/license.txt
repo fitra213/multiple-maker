@@ -1,0 +1,11 @@
+Model Information:
+* title:	Bugatti Veyron 16.4 Super Sport - Lowpoly
+* source:	https://sketchfab.com/3d-models/bugatti-veyron-164-super-sport-lowpoly-0ee4c65face949efa4500deb17c79150
+* author:	andikapratamaw (https://sketchfab.com/andikapratamaw)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Bugatti Veyron 16.4 Super Sport - Lowpoly" (https://sketchfab.com/3d-models/bugatti-veyron-164-super-sport-lowpoly-0ee4c65face949efa4500deb17c79150) by andikapratamaw (https://sketchfab.com/andikapratamaw) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

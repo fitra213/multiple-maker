@@ -1,0 +1,11 @@
+Model Information:
+* title:	Low Poly Car - De Tomaso P72 2020
+* source:	https://sketchfab.com/3d-models/low-poly-car-de-tomaso-p72-2020-ab85c302e652492196b600ee1eb7106a
+* author:	ROH3D (https://sketchfab.com/roh3d)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Low Poly Car - De Tomaso P72 2020" (https://sketchfab.com/3d-models/low-poly-car-de-tomaso-p72-2020-ab85c302e652492196b600ee1eb7106a) by ROH3D (https://sketchfab.com/roh3d) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
