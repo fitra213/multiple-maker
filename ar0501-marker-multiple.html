@@ -1,0 +1,137 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <!-- Correcting zooming issue -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <!-- Library untuk VR membangun 3D -->
+    <script src="./js/aframe/aframe.min.js"></script>
+    <!-- Library untuk AR yang melakukan pengenalan marker dan menyematkan kamera-->
+    <script src="./js/arjs/aframe-ar.js"></script>
+    <title>WebAR: Multiple Marker</title>
+    <!-- include text geometry -->
+    <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded vr-mode-ui="enabled: false" arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;">
+
+        <!-- create assets -->
+        <a-assets timeout="900000">
+            <a-asset-item id="porche_918_spyder_2014" src="./assets/porche_918_spyder_2014/scene.gltf"></a-asset-item>
+            <a-asset-item id="ferrari_488_pista_widebody" src="./assets/ferrari_488_pista_widebody/scene.gltf"></a-asset-item>
+            <a-asset-item id="toyota_crown_super_deluxe_mild_hybrid" src="./assets/toyota_crown_super_deluxe_mild_hybrid/scene.gltf"></a-asset-item>
+            <a-asset-item id="bugatti_la_voiture" src="./assets/bugatti_la_voiture/scene.gltf"></a-asset-item>
+            <a-asset-item id="bugatti_veyron_16" src="./assets/bugatti_veyron_16.4_super_sport_-_lowpoly/scene.gltf"></a-asset-item>
+            <a-asset-item id="nissan_silvia_s15_lbwk_super_silhouette" src="./assets/nissan_silvia_s15_lbwk_super_silhouette/scene.gltf"></a-asset-item>
+
+            <a-asset-item id="modified_honda_civic" src="./assets/modified_honda_civic/scene.gltf"></a-asset-item>
+            <a-asset-item id="vintage_sport_car" src="./assets/vintage_sport_car/scene.gltf"></a-asset-item>
+            <a-asset-item id="low_poly_car_-_de_tomaso_p72_2020" src="./assets/low_poly_car_-_de_tomaso_p72_2020/scene.gltf"></a-asset-item>
+            <a-asset-item id="lamborghini-aventador" src="./assets/lamborghini-aventador/scene.gltf"></a-asset-item>
+
+        </a-assets>
+        <!-- handle unknown marker -->
+        <a-marker type="9.png">
+            <a-box depth="1" height="1" width="1" position="0 0.5 0" material="opacity: 0.5; side:double; color:purple;"></a-box>
+        </a-marker>
+
+        <!-- handle hiro marker -->
+        <a-marker preset="hiro">
+            <a-entity gltf-model="#drone" animation-mixer></a-entity>
+        </a-marker>
+
+        <!-- handle kanji marker -->
+        <a-marker preset="kanji">
+            <a-entity gltf-model="#cookie"></a-entity>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="0">
+            <a-box position="0 0.5 0" material="opacity: 0.5; side: double;color:red;">
+                <a-torus-knot radius="0.26" radius-tubular="0.05"></a-torus-knot>
+            </a-box>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="1">
+            <a-entity gltf-model="#roti"></a-entity>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="10">
+            <a-plane width="1" height="1" position="0 0 0" rotation="-90 0 0" color="green">
+                <a-gltf-model src="#ferra" rotation="90 0 0" position="0 -0.2 0.2" scale="0.5 0.5 0.5"></a-gltf-model>
+            </a-plane>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="11">
+            <a-plane width="1" height="1" position="0 0 0" rotation="-90 0 0" color="white">
+                <a-gltf-model src="./assets/bugatti_la_voiture/scene.gltf" rotation="0 0 0" position="0 0 0" scale="0 0 0.5"></a-gltf-model>
+            </a-plane>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="12">
+            <a-plane width="1" height="1" position="0 0 0" rotation="-90 0 0" color="cyan">
+                <a-gltf-model src="./assets/bugatti_veyron_16.4_super_sport_-_lowpoly/scene.gltf" rotation="90 0 0" position="0 -0.2 1" scale="0.5 0.5 0.5"></a-gltf-model>
+            </a-plane>
+        </a-marker>
+
+        <!-- handle matrix marker -->
+        <a-marker type="barcode" value="13">
+            <a-gltf-model src="./assets/nissan_silvia_s15_lbwk_super_silhouette/scene.gltf" rotation="-90 0 0" width="2" height="1">
+                <a-entity position="0 -2.5 0" text-geometry="value: Perpustakaan Sekolah Alam;  style: italic; size: 0.4; weight: bold; height: 0;" material="shader: flat; color: blue" align="center"></a-entity>
+            </a-gltf-model>
+        </a-marker>
+
+         <!-- handle matrix marker -->
+        <a-marker type="barcode" value="14">
+            <a-gltf-model src="./assets/vintage_sport_car/scene.gltf" rotation="-90 0 0" width="2" height="1">
+                <a-entity position="0 -2.5 0" text-geometry="value: Perpustakaan Sekolah Alam;  style: italic; size: 0.4; weight: bold; height: 0;" material="shader: flat; color: blue" align="center"></a-entity>
+            </a-gltf-model>
+        </a-marker>
+
+         <!-- handle matrix marker -->
+         <a-marker type="barcode" value="15">
+            <a-gltf-model src="./assets/low_poly_car_-_de_tomaso_p72_2020/scene.gltf" rotation="-90 0 0" width="2" height="1">
+                <a-entity position="0 -2.5 0" text-geometry="value: Perpustakaan Sekolah Alam;  style: italic; size: 0.4; weight: bold; height: 0;" material="shader: flat; color: blue" align="center"></a-entity>
+            </a-gltf-model>
+        </a-marker>
+
+         <!-- handle matrix marker -->
+         <a-marker type="barcode" value="16">
+            <a-gltf-model src="./assets/lamborghini-aventador/scene.gltf" rotation="-90 0 0" width="2" height="1">
+                <a-entity position="0 -2.5 0" text-geometry="value: Perpustakaan Sekolah Alam;  style: italic; size: 0.4; weight: bold; height: 0;" material="shader: flat; color: blue" align="center"></a-entity>
+            </a-gltf-model>
+        </a-marker>
+
+         <!-- handle matrix marker -->
+         <a-marker type="barcode" value="17">
+            <a-gltf-model src="./assets/porche_918_spyder_2014/scene.gltf" rotation="-90 0 0" width="2" height="1">
+                <a-entity position="0 -2.5 0" text-geometry="value: Perpustakaan Sekolah Alam;  style: italic; size: 0.4; weight: bold; height: 0;" material="shader: flat; color: blue" align="center"></a-entity>
+            </a-gltf-model>
+        </a-marker>
+
+             <!-- handle matrix marker -->
+             <a-marker type="barcode" value="18">
+                <a-gltf-model src="./assets/toyota_crown_super_deluxe_mild_hybrid/scene.gltf" rotation="-90 0 0" width="2" height="1">
+                    <a-entity position="0 -2.5 0" text-geometry="value: Perpustakaan Sekolah Alam;  style: italic; size: 0.4; weight: bold; height: 0;" material="shader: flat; color: blue" align="center"></a-entity>
+                </a-gltf-model>
+            </a-marker>
+
+             <!-- handle matrix marker -->
+             <a-marker type="barcode" value="18">
+                <a-gltf-model src="./assets/modified_honda_civic/scene.gltf" rotation="-90 0 0" width="2" height="1">
+                    <a-entity position="0 -2.5 0" text-geometry="value: Perpustakaan Sekolah Alam;  style: italic; size: 0.4; weight: bold; height: 0;" material="shader: flat; color: blue" align="center"></a-entity>
+                </a-gltf-model>
+            </a-marker>
+
+        <!-- add a simple camera -->
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+
+</html>
